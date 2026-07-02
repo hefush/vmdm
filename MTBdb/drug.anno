@@ -1,0 +1,42 @@
+# Drug resistance gene mechanism descriptions
+eis	The eis gene encodes a regulatory factor/acetyltransferase. Mutations in the promoter or coding region of eis can lead to upregulated expression or altered activity, reducing susceptibility to aminoglycoside drugs (such as amikacin and kanamycin) through acetylation or altering drug entry/action pathways.
+rrs	The rrs gene encodes bacterial 16S ribosomal RNA. Point mutations at specific sites alter the ribosome or drug binding sites, leading to resistance to aminoglycosides and other drugs acting on 16S rRNA (such as streptomycin, kanamycin, and capreomycin).
+atpE	The atpE gene encodes the c subunit of ATP synthase, one of bedaquiline's targets. Point mutations in atpE can alter ATP synthase conformation, reducing bedaquiline binding to its target and thereby conferring resistance.
+pepQ	The pepQ gene encodes an aminopeptidase/peptidase. pepQ mutations have been reported to be associated with resistance to bedaquiline and clofazimine, potentially through metabolic regulation or affecting drug sensitivity-related pathways indirectly.
+Rv0678	The Rv0678 gene encodes a transcriptional repressor that negatively regulates efflux pumps (such as MmpL5-MmpS5). Rv0678 mutations typically lead to efflux pump overexpression, increasing drug efflux and subsequently reducing intracellular concentrations of drugs like bedaquiline and clofazimine, conferring resistance.
+tlyA	The tlyA gene encodes a ribosomal methyltransferase that modifies specific sites on 23S/16S rRNA. Loss of function or mutations in tlyA alter ribosomal methylation status, affecting capreomycin binding to the ribosome and leading to capreomycin resistance.
+ddn	The ddn gene encodes a sulfur/nitro reductase responsible for bioactivation of prodrugs like delamanid. ddn mutations can reduce or eliminate delamanid activation, leading to drug inactivation and resistance.
+fbiA	The fbiA gene participates in the F420 cofactor biosynthesis pathway. fbiA mutations affect F420 production, thereby hindering activation of drugs like delamanid that require F420-dependent bioactivation, conferring resistance.
+fbiB	The fbiB gene participates in F420 cofactor biosynthesis/modification. Functional defects in fbiB reduce F420 levels, thereby hindering activation of drugs like delamanid that require F420-dependent bioactivation, leading to resistance.
+fbiC	The fbiC gene is a key gene in the F420 biosynthesis pathway. fbiC mutations significantly reduce or block F420 production, making delamanid-class drugs unable to be activated and ineffective.
+fgd1	The fgd1 gene encodes an F420-dependent glucose-6-phosphate dehydrogenase involved in the F420 reduction cycle to maintain its active form. fgd1 mutations interfere with F420-mediated drug activation processes, affecting the efficacy of delamanid-class drugs.
+Rv2983	Rv2983 participates in cofactor production or related metabolic pathways. Rv2983 mutations can indirectly affect sensitivity to F420-dependent drugs (such as delamanid).
+embB	The embB gene encodes an enzyme involved in cell wall galactose/arabinose polymer synthesis. embB mutations alter cell wall structure or drug binding sites, leading to resistance to drugs like ethambutol that affect cell wall synthesis.
+ethA	The ethA gene encodes a monooxygenase responsible for bioactivation of prodrugs like ethionamide. ethA mutations can lead to insufficient drug activation, thereby conferring resistance to ethionamide.
+inhA	The inhA gene encodes an enzyme in the fatty acid synthesis pathway and is a direct target of drugs like isoniazid and ethionamide. inhA or its promoter mutations can reduce drug-target affinity or lead to target overexpression, reducing drug susceptibility.
+katG	The katG gene encodes a peroxidase/peroxidase-peroxide reductase responsible for activating prodrugs like isoniazid. katG inactivation or reduced function makes isoniazid difficult to activate, thereby conferring high-level resistance.
+gyrA	The gyrA gene encodes DNA gyrase A subunit. Fluoroquinolone drugs bind to the A subunit to inhibit supercoiling enzyme activity. Specific site mutations in gyrA reduce drug binding to the A subunit, leading to resistance to fluoroquinolones like levofloxacin and moxifloxacin.
+gyrB	The gyrB gene encodes DNA gyrase B subunit. gyrB mutations can also affect fluoroquinolone binding or gyrase activity, leading to fluoroquinolone resistance, especially as a supplementary/alternative resistance mechanism beyond gyrA mutations.
+rplC	The rplC gene encodes ribosomal 50S large subunit protein L3. Linezolid binds to the ribosomal large subunit to inhibit protein synthesis. rplC mutations can alter L3 structure or drug binding sites, leading to linezolid resistance.
+rrl	The rrl gene encodes 23S rRNA. Drugs like linezolid commonly bind to 23S rRNA. Point mutations or insertions in rrl directly affect drug binding sites, conferring resistance.
+pncA	The pncA gene encodes pyrazinamidase responsible for converting the prodrug pyrazinamide to its active form. pncA mutations or loss of function block drug activation, thereby conferring pyrazinamide resistance.
+rpoB	The rpoB gene encodes RNA polymerase β subunit. Rifampicin inhibits transcription by binding to the β subunit. Specific site mutations in rpoB alter the binding site, significantly reducing rifampicin's inhibitory effect, conferring resistance.
+gid	The gid gene encodes a methyltransferase related to rRNA modification. Its mutations alter ribosomal methylation status and lead to low-to-moderate streptomycin resistance, typically affecting drug-ribosome interactions.
+rpsL	The rpsL gene encodes ribosomal 30S subunit protein S12. Point mutations in rpsL can alter ribosome configuration and prevent aminoglycoside drugs (such as streptomycin) from binding to the 30S subunit, thereby conferring significant resistance.
+
+# Drug resistance model correspondence
+Amikacin	Amikacin
+Bedaquiline	Bedaquiline
+Capreomycin	Capreomycin
+Clofazimine	Clofazimine
+Delamanid	Delamanid
+Ethambutol	Ethambutol
+Ethionamide	Ethionamide
+Isoniazid	Isoniazid
+Kanamycin	Kanamycin
+Levofloxacin	Levofloxacin
+Linezolid	Linezolid
+Moxifloxacin	Moxifloxacin
+Pyrazinamide	Pyrazinamide
+Rifampicin	Rifampicin
+Streptomycin	Streptomycin
