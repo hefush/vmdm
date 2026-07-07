@@ -86,6 +86,15 @@ python vmdm.py input.list output_dir --jobs 4 --threads 20
 
 `--min_ppv` values are matched to `--drugs` by order. With the defaults, Rifampicin uses `0.95`, Isoniazid uses `0.97`, Pyrazinamide uses `0.85`, and Ethambutol uses `0.70`.
 
+To derive prevalence-adjusted `--min_ppv` values from the packaged training database, use:
+
+```bash
+python ppv_prevalence_adjustment.py --traindb MTBdb --target-prevalence 0.10 --target-ppv 0.90
+```
+
+`--target-prevalence` and `--target-ppv` can also be supplied as comma-separated `drug=value` pairs when the target prevalence or PPV differs by drug.
+The output `required_min_ppv` column is the value to pass to `vmdm.py --min_ppv` in `--drugs` order.
+
 ## Output
 
 Each sample is written to `output_dir/<sample_name>/`.
