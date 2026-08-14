@@ -1,7 +1,7 @@
 # FASTQ Smoke Test
 
 This directory contains two small down-sampled public-read examples for
-reviewer testing of the full VMDM FASTQ entry point.
+testing the full VMDM FASTQ entry point.
 
 Files:
 
@@ -10,7 +10,7 @@ Files:
 - `example_fastq.list`
 - `expected_output/`
 
-From the package root, after creating and activating the conda environment:
+From the repository root, after creating and activating the conda environment:
 
 ```bash
 python vmdm.py examples/fastq_smoke/example_fastq.list examples/fastq_smoke/output --jobs 1 --threads 2
@@ -39,9 +39,10 @@ The exact model probability values can vary slightly with library builds and
 threading, but the reports should be generated successfully and contain the
 expected catalogue/model markers above.
 
-In our review-package environment on a shared Linux server, this default
-four-drug smoke test took about 1-2 minutes with `--jobs 1 --threads 2`.
-Faster local disks or higher-clock CPUs may complete it in under 1 minute.
+In our verification environment on a shared Linux server, this default four-drug
+smoke test took about 1-2 minutes with decompressed training tables and
+`--jobs 1 --threads 2`. Faster local disks or higher-clock CPUs may complete it
+in under 1 minute.
 
 The default command runs machine-learning prediction for the four first-line
 drugs. Catalogue-supported variants for other drugs can still appear in the
