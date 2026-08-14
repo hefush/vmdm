@@ -12,7 +12,7 @@ The VMDM prediction pipeline itself is maintained in the parent repository at:
 https://github.com/hefush/vmdm
 
 This directory is intentionally narrower than the prediction pipeline: it is the
-paper-analysis companion for figure/table reproduction and reviewer inspection.
+paper-analysis companion for transparent figure and table reproduction.
 
 ## Repository Layout
 
@@ -76,7 +76,7 @@ and Figure 2D is distributed as the plotted LD-network subset.
 
 ## Validation
 
-Run the table and claim checks from the repository root:
+Run the table and claim checks from this directory:
 
 ```bash
 (cd analysis_checks && python verify_table.py)
@@ -120,9 +120,8 @@ reported figures and inspect the reported table-level analyses.
 The custom code for the VMDM analysis pipeline is available on GitHub at
 https://github.com/hefush/vmdm. The specific scripts and source data used to
 generate the figures and perform the analyses reported in this paper are
-included in the `vmdm-paper-analysis/` directory of the same repository. The
-version of the code used for this publication is archived on Zenodo with the
-DOI: [Your Zenodo DOI].
+included in the `vmdm-paper-analysis/` directory of the same repository. Cite
+the associated repository release or archived record when available.
 
 ## License
 

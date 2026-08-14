@@ -23,7 +23,7 @@ Additional drugs can be added by providing matching `*.features.xls` and
 The packaged feature tables are already uncompressed plain tabular files
 (`MTBdb/*.features.xls`); there are no packaged `*.features.xls.gz` files to
 decompress. The packaged training tables are distributed as
-`MTBdb/*.data.xls.gz` to keep the repository and reviewer package compact. VMDM
+`MTBdb/*.data.xls.gz` to keep the public repository compact. VMDM
 automatically detects and reads these gzip-compressed training tables, so no
 decompression step is required for installation, smoke tests or small runs.
 
@@ -55,17 +55,7 @@ Public URL: <https://github.com/hefush/vmdm>
 
 ### Setup
 
-From the Nature Communications reviewer zip package:
-
-```bash
-unzip VMDM_software_review_package_20260813.zip
-cd VMDM_software_review_package_20260813
-
-mamba env create -f requirements.yaml -p ./venv
-conda activate ./venv
-```
-
-From the public GitHub repository:
+Clone the public repository and create the Conda environment:
 
 ```bash
 git clone https://github.com/hefush/vmdm.git
