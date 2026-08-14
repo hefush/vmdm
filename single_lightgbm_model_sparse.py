@@ -5,7 +5,6 @@ import resource
 import lightgbm as lgb
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import recall_score, precision_score, accuracy_score, precision_recall_curve, auc
 from scipy.sparse import csr_matrix
@@ -22,6 +21,16 @@ outfile = sys.argv[3]
 min_ppv = float(sys.argv[4]) if len(sys.argv) > 4 else 0.90
 threshold = 0.5
 
+
+def get_model_threads():
+    try:
+        return max(1, int(os.environ.get('VMDM_MODEL_THREADS', os.environ.get('OMP_NUM_THREADS', '2'))))
+    except ValueError:
+        return 2
+
+
+model_threads = get_model_threads()
+
 # For recording resource consumption:
 start_cpu = resource.getrusage(resource.RUSAGE_SELF).ru_utime
 start_time = time.time()
@@ -37,11 +46,20 @@ feature_names = X.columns
 # Convert feature data to float type
 X = X.astype(np.float32)
 
+if X.shape[1] == 0:
+    raise SystemExit(
+        "No overlapping features were found between the query sample and the "
+        "training database. Check the VCF, feature list, --min_cov and --max_snps settings."
+    )
+
 # Convert to sparse matrix to save memory:
 X = csr_matrix(X)
 
 # Split training set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+stratify = y if y.nunique() > 1 and y.value_counts().min() >= 2 else None
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=stratify
+)
 
 # Convert sparse matrix to LightGBM compatible format
 train_data = lgb.Dataset(X_train, label=y_train)
@@ -57,7 +75,13 @@ params = {
         'feature_fraction': 0.9,
         'bagging_fraction': 0.8,
         'bagging_freq': 5,
-        'verbose': 0
+        'verbose': -1,
+        'seed': 42,
+        'feature_fraction_seed': 42,
+        'bagging_seed': 42,
+        'data_random_seed': 42,
+        'deterministic': True,
+        'num_threads': model_threads,
 }
 
 # Train model
@@ -69,23 +93,21 @@ y_pred = (y_pred_prob >= threshold).astype(int)
 # Generate threshold curve:
 precision, recall, thresholds = precision_recall_curve(y_test, y_pred_prob)
 # Calculate precision (PPV):
-raw_precision = precision_score(y_test, y_pred)
+raw_precision = precision_score(y_test, y_pred, zero_division=0)
 # Adjust threshold based on PPV on test set:
 if raw_precision < min_ppv:
-    optimal_idx = np.argmax(precision >= min_ppv)
-    if optimal_idx < len(thresholds):
-        if thresholds[optimal_idx] > threshold:
-            threshold = thresholds[optimal_idx]
-    else:
-        if thresholds[-1] > threshold:
-            threshold = thresholds[-1]
+    eligible = np.where(precision[:-1] >= min_ppv)[0]
+    if len(eligible) > 0:
+        threshold = max(threshold, thresholds[eligible[0]])
+    elif len(thresholds) > 0:
+        threshold = max(threshold, thresholds[-1])
     # Make predictions based on new threshold:
     y_pred = (y_pred_prob >= threshold).astype(int)
 
 # Calculate performance scores
 model_auc = auc(recall, precision)
-model_recall = recall_score(y_test, y_pred)
-model_precision = precision_score(y_test, y_pred)
+model_recall = recall_score(y_test, y_pred, zero_division=0)
+model_precision = precision_score(y_test, y_pred, zero_division=0)
 model_accuracy = accuracy_score(y_test, y_pred)
 
 end_cpu = resource.getrusage(resource.RUSAGE_SELF).ru_utime
@@ -100,6 +122,14 @@ X_valid = df.drop(['Name'], axis=1)
 
 # Convert feature data to float type
 X_valid = X_valid.astype(np.float32)
+
+missing_features = [feature for feature in feature_names if feature not in X_valid.columns]
+if missing_features:
+    raise SystemExit(
+        "The query feature file does not contain all training features: "
+        + ", ".join(missing_features[:10])
+    )
+X_valid = X_valid.loc[:, feature_names]
 
 # Convert to sparse matrix to save memory:
 X_valid = csr_matrix(X_valid)

@@ -1,0 +1,47 @@
+Drug	Name	pDST	Mykrobe_pred	Mykrobe_evidence_raw	Mykrobe_evidence_short	TB-Profiler_pred	TB-Profiler_evidence_raw	TB-Profiler_evidence_short	VMDM_pred	VMDM_evidence_raw	VMDM_evidence_short
+Ethambutol	ERR10225376	S	S			R	embB_p.Met306Val(1.00)	M306V	R	embB_p.Met306Val(R:34.23%),model(0.89)	M306V
+Ethambutol	ERR10225386	S	S			S			R	model(0.57)	mdl 0.57
+Ethambutol	ERR10225389	S	S			R	embA_c.-16C>T(0.50)	embA-16C>T	R	embB_p.Met306Val(R:34.23%),model(0.77)	M306V
+Ethambutol	ERR10225416	S	S			R	embA_c.-12C>T(0.29)	embA-12C>T	S		
+Ethambutol	ERR10225424	S	R	embB_Q497R-CAG4248002CGG:8:38:172	Q497R	R	embB_p.Gln497Arg(1.00)	Q497R	R	model(0.51)	mdl 0.51
+Ethambutol	ERR10225425	R	R	embB_M306V-ATG4247429GTG:0:49:281	M306V	R	embB_p.Met306Val(1.00)	M306V	R	embB_p.Met306Val(R:34.23%),model(0.82)	M306V
+Ethambutol	ERR10225435	R	S			S			R	model(0.60)	mdl 0.60
+Ethambutol	ERR10225447	R	R	embB_M306V-ATG4247429GTG:3:20:173	M306V	R	embA_c.-11C>A(1.00)	embA-11C>A	R	model(0.88)	mdl 0.88
+Ethambutol	ERR10225459	S	S			R	embB_p.Gly406Ser(1.00)	G406S	R	embB_p.Gly406Ser(R:1.97%),model(0.52)	G406S
+Ethambutol	ERR10225467	S	S			S			R	model(0.64)	mdl 0.64
+Ethambutol	ERR10225483	R	R	embB_M306V-ATG4247429GTG:41:56:178	M306V	R	embB_p.Met306Val(0.60)	M306V	R	embB_p.Met306Val(R:34.23%),model(0.75)	M306V
+Isoniazid	ERR10225375	S	S			S			R	model(0.65)	mdl 0.65
+Isoniazid	ERR10225376	S	S			R	katG_p.Ser315Thr(1.00)	S315T	R	katG_p.Ser315Thr(R:77.81%),model(0.99)	S315T
+Isoniazid	ERR10225382	S	R	katG_S315T-GCT2155167GGT:0:38:196	S315T	R	fabG1_c.-15C>T(0.50),katG_p.Ser315Thr(1.00),katG_p.Gly299Cys(1.00)	S315T	R	katG_p.Ser315Thr(R:77.81%),model(0.99)	S315T
+Isoniazid	ERR10225385	S	S			R	katG_p.Ser315Thr(0.50)	S315T	R	model(0.99)	mdl 0.99
+Isoniazid	ERR10225386	S	S			S			R	model(0.63)	mdl 0.63
+Isoniazid	ERR10225389	R	R	katG_S315T-GCT2155167GGT:6:42:205	S315T	R	katG_p.Ser315Thr(0.67)	S315T	R	inhA_c.-154G>A(R:3.57%),model(1.00)	inhA-154G>A
+Isoniazid	ERR10225390	R	R	fabG1_C-15X-C1673425T:0:20:162	-15C>T	R	fabG1_c.-15C>T(1.00)	-15C>T	R	inhA_c.-777C>T(R:21.34%),model(0.91)	inhA-777C>T
+Isoniazid	ERR10225399	R	R	katG_S315T-GCT2155167GGT:0:147:890	S315T	R	katG_p.Ser315Thr(1.00)	S315T	R	katG_p.Ser315Thr(R:77.81%),model(0.99)	S315T
+Isoniazid	ERR10225414	R	S			R	katG_p.Ser315Thr(1.00),katG_p.Leu141Phe(1.00)	S315T	R	katG_p.Ser315Thr(R:77.81%),model(0.99)	S315T
+Isoniazid	ERR10225415	R	S			S			R	model(0.99)	mdl 0.99
+Isoniazid	ERR10225416	R	S			R	katG_p.Ser315Thr(1.00)	S315T	R	katG_p.Ser315Thr(R:77.81%),model(0.99)	S315T
+Isoniazid	ERR10225424	S	S			S			R	model(0.77)	mdl 0.77
+Isoniazid	ERR10225425	R	R	fabG1_C-15X-C1673425T:0:20:162	-15C>T	S			R	model(0.98)	mdl 0.98
+Isoniazid	ERR10225435	R	S			S			R	model(0.69)	mdl 0.69
+Isoniazid	ERR10225447	R	R	fabG1_C-15X-C1673425T:20:60:214;katG_S315T-GCT2155167GGT:0:75:430	S315T	R	fabG1_c.-15C>T(0.75),katG_p.Ser315Thr(1.00)	S315T	R	inhA_c.-777C>T(R:21.34%),katG_p.Ser315Thr(R:77.81%),model(1.00)	S315T
+Isoniazid	ERR10225467	S	S			R	katG_p.Ser315Thr(0.50)	S315T	R	model(0.99)	mdl 0.99
+Isoniazid	ERR10225483	S	S			S			R	model(0.94)	mdl 0.94
+Isoniazid	ERR10225492	R	R	katG_S315T-GCT2155167GGT:0:21:207	S315T	S			R	model(0.71)	mdl 0.71
+Isoniazid	ERR10225543	R	R	fabG1_C-15X-C1673425T:0:40:244;katG_S315T-GCT2155167GGT:0:72:377	S315T	R	fabG1_c.-15C>T(1.00),katG_p.Ser315Thr(1.00)	S315T	R	inhA_c.-777C>T(R:21.34%),katG_p.Ser315Thr(R:77.81%),model(0.99)	S315T
+Rifampicin	ERR10225375	R	S			R	rpoB_p.Ser450Leu(0.50)	S450L	R	model(0.98)	mdl 0.98
+Rifampicin	ERR10225376	S	R	rpoB_S450L-TCG761154TTG:0:42:253	S450L	R	rpoB_p.Ser450Leu(1.00),rpoC_p.Ile491Thr(1.00)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L
+Rifampicin	ERR10225382	R	S			S			R	model(0.85)	mdl 0.85
+Rifampicin	ERR10225386	R	R	rpoB_S450L-TCG761154TTG:0:19:158	S450L	R	rpoB_p.Ser450Leu(1.00)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L
+Rifampicin	ERR10225389	R	S			S			R	model(0.81)	mdl 0.81
+Rifampicin	ERR10225399	S	S			R	rpoB_p.Ser450Leu(1.00)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.97)	S450L
+Rifampicin	ERR10225402	R	R	rpoB_S450L-TCG761154TTG:20:65:244	S450L	R	rpoB_p.Ser450Leu(0.75),rpoC_p.Ile491Thr(0.83)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L
+Rifampicin	ERR10225414	S	R	rpoB_S450L-TCG761154TTG:0:19:158	S450L	S			R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L
+Rifampicin	ERR10225416	S	R	rpoB_S450L-TCG761154TTG:0:19:199	S450L	R	rpoB_p.Ser450Leu(1.00)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L
+Rifampicin	ERR10225425	R	R	rpoB_S450L-TCG761154TTG:0:20:162	S450L	R	rpoB_p.Ser450Leu(1.00)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L
+Rifampicin	ERR10225435	R	S			S			R	model(0.70)	mdl 0.70
+Rifampicin	ERR10225447	R	S			S			R	model(0.93)	mdl 0.93
+Rifampicin	ERR10225467	R	S			R	rpoB_p.Ser450Leu(0.50)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L
+Rifampicin	ERR10225483	S	S			S			R	model(0.75)	mdl 0.75
+Rifampicin	ERR10225492	R	R	rpoB_D435Y-GAC761109TAC:0:40:284	D435Y	R	rpoB_p.Asp435Tyr(1.00)	D435Y	R	rpoB_p.Asp435Tyr(R:2.03%)	D435Y
+Rifampicin	ERR10225550	S	R	rpoB_S450L-TCG761154TTG:0:38:196	S450L	R	rpoB_p.Ser450Leu(1.00)	S450L	R	rpoB_p.Ser450Leu(R:64.40%),model(0.99)	S450L

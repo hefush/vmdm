@@ -1,0 +1,134 @@
+Drug	Name	pDST	Mykrobe_pred	Mykrobe_evidence_short	TBProfiler_pred	TBProfiler_evidence_short	VMDM_pred	VMDM_evidence_short	discordant	row_group
+Rifampicin	ERR10225382	R	S		S		R	mdl 0.85	True	0
+Rifampicin	ERR10225389	R	S		S		R	mdl 0.81	True	0
+Rifampicin	ERR10225435	R	S		S		R	mdl 0.70	True	0
+Rifampicin	ERR10225447	R	S		S		R	mdl 0.93	True	0
+Rifampicin	ERR10225375	R	S		R	S450L	R	mdl 0.98	True	1
+Rifampicin	ERR10225467	R	S		R	S450L	R	S450L	True	1
+Rifampicin	ERR10225386	R	R	S450L	R	S450L	R	S450L	False	2
+Rifampicin	ERR10225402	R	R	S450L	R	S450L	R	S450L	False	2
+Rifampicin	ERR10225425	R	R	S450L	R	S450L	R	S450L	False	2
+Rifampicin	ERR10225492	R	R	D435Y	R	D435Y	R	D435Y	False	2
+Rifampicin	ERR10225385	R	S		S		S		True	3
+Rifampicin	ERR10225390	R	S		S		S		True	3
+Rifampicin	ERR10225445	R	S		S		S		True	3
+Rifampicin	ERR10225469	R	S		S		S		True	3
+Rifampicin	ERR10225504	R	S		S		S		True	3
+Rifampicin	ERR10225514	R	S		S		S		True	3
+Rifampicin	ERR10225535	R	S		S		S		True	3
+Rifampicin	ERR10225543	R	S		S		S		True	3
+Rifampicin	ERR10225483	S	S		S		R	mdl 0.75	True	4
+Rifampicin	ERR10225376	S	R	S450L	R	S450L	R	S450L	True	5
+Rifampicin	ERR10225399	S	S		R	S450L	R	S450L	True	5
+Rifampicin	ERR10225414	S	R	S450L	S		R	S450L	True	5
+Rifampicin	ERR10225416	S	R	S450L	R	S450L	R	S450L	True	5
+Rifampicin	ERR10225550	S	R	S450L	R	S450L	R	S450L	True	5
+Rifampicin	ERR10225415	S	S		S		S		False	6
+Rifampicin	ERR10225424	S	S		S		S		False	6
+Rifampicin	ERR10225459	S	S		S		S		False	6
+Rifampicin	ERR10225497	S	S		S		S		False	6
+Rifampicin	ERR10225499	S	S		S		S		False	6
+Rifampicin	ERR10225500	S	S		S		S		False	6
+Rifampicin	ERR10225501	S	S		S		S		False	6
+Rifampicin	ERR10225502	S	S		S		S		False	6
+Rifampicin	ERR10225507	S	S		S		S		False	6
+Rifampicin	ERR10225511	S	S		S		S		False	6
+Rifampicin	ERR10225517	S	S		S		S		False	6
+Rifampicin	ERR10225519	S	S		S		S		False	6
+Rifampicin	ERR10225520	S	S		S		S		False	6
+Rifampicin	ERR10225523	S	S		S		S		False	6
+Rifampicin	ERR10225524	S	S		S		S		False	6
+Rifampicin	ERR10225525	S	S		S		S		False	6
+Rifampicin	ERR10225527	S	S		S		S		False	6
+Rifampicin	ERR10225528	S	S		S		S		False	6
+Rifampicin	ERR10225536	S	S		S		S		False	6
+Rifampicin	ERR10225537	S	S		S		S		False	6
+Rifampicin	ERR10225539	S	S		S		S		False	6
+Rifampicin	ERR10225542	S	S		S		S		False	6
+Rifampicin	ERR10225546	S	S		S		S		False	6
+Rifampicin	ERR10225549	S	S		S		S		False	6
+Rifampicin	ERR10225551	S	S		S		S		False	6
+Rifampicin	ERR10225553	S	S		S		S		False	6
+Isoniazid	ERR10225415	R	S		S		R	mdl 0.99	True	0
+Isoniazid	ERR10225435	R	S		S		R	mdl 0.69	True	0
+Isoniazid	ERR10225414	R	S		R	S315T	R	S315T	True	1
+Isoniazid	ERR10225416	R	S		R	S315T	R	S315T	True	1
+Isoniazid	ERR10225425	R	R	-15C>T	S		R	mdl 0.98	True	1
+Isoniazid	ERR10225492	R	R	S315T	S		R	mdl 0.71	True	1
+Isoniazid	ERR10225389	R	R	S315T	R	S315T	R	inhA-154G>A	False	2
+Isoniazid	ERR10225390	R	R	-15C>T	R	-15C>T	R	inhA-777C>T	False	2
+Isoniazid	ERR10225399	R	R	S315T	R	S315T	R	S315T	False	2
+Isoniazid	ERR10225447	R	R	S315T	R	S315T	R	S315T	False	2
+Isoniazid	ERR10225543	R	R	S315T	R	S315T	R	S315T	False	2
+Isoniazid	ERR10225445	R	S		S		S		True	3
+Isoniazid	ERR10225469	R	S		S		S		True	3
+Isoniazid	ERR10225524	R	S		S		S		True	3
+Isoniazid	ERR10225375	S	S		S		R	mdl 0.65	True	4
+Isoniazid	ERR10225386	S	S		S		R	mdl 0.63	True	4
+Isoniazid	ERR10225424	S	S		S		R	mdl 0.77	True	4
+Isoniazid	ERR10225483	S	S		S		R	mdl 0.94	True	4
+Isoniazid	ERR10225376	S	S		R	S315T	R	S315T	True	5
+Isoniazid	ERR10225382	S	R	S315T	R	S315T	R	S315T	True	5
+Isoniazid	ERR10225385	S	S		R	S315T	R	mdl 0.99	True	5
+Isoniazid	ERR10225467	S	S		R	S315T	R	mdl 0.99	True	5
+Isoniazid	ERR10225459	S	S		S		S		False	6
+Isoniazid	ERR10225497	S	S		S		S		False	6
+Isoniazid	ERR10225499	S	S		S		S		False	6
+Isoniazid	ERR10225500	S	S		S		S		False	6
+Isoniazid	ERR10225504	S	S		S		S		False	6
+Isoniazid	ERR10225511	S	S		S		S		False	6
+Isoniazid	ERR10225514	S	S		S		S		False	6
+Isoniazid	ERR10225517	S	S		S		S		False	6
+Isoniazid	ERR10225519	S	S		S		S		False	6
+Isoniazid	ERR10225520	S	S		S		S		False	6
+Isoniazid	ERR10225523	S	S		S		S		False	6
+Isoniazid	ERR10225525	S	S		S		S		False	6
+Isoniazid	ERR10225527	S	S		S		S		False	6
+Isoniazid	ERR10225528	S	S		S		S		False	6
+Isoniazid	ERR10225536	S	S		S		S		False	6
+Isoniazid	ERR10225537	S	S		S		S		False	6
+Isoniazid	ERR10225539	S	S		S		S		False	6
+Isoniazid	ERR10225546	S	S		S		S		False	6
+Isoniazid	ERR10225551	S	S		S		S		False	6
+Isoniazid	ERR10225553	S	S		S		S		False	6
+Ethambutol	ERR10225435	R	S		S		R	mdl 0.60	True	0
+Ethambutol	ERR10225425	R	R	M306V	R	M306V	R	M306V	False	2
+Ethambutol	ERR10225447	R	R	M306V	R	embA-11C>A	R	mdl 0.88	False	2
+Ethambutol	ERR10225483	R	R	M306V	R	M306V	R	M306V	False	2
+Ethambutol	ERR10225390	R	S		S		S		True	3
+Ethambutol	ERR10225492	R	S		S		S		True	3
+Ethambutol	ERR10225386	S	S		S		R	mdl 0.57	True	4
+Ethambutol	ERR10225467	S	S		S		R	mdl 0.64	True	4
+Ethambutol	ERR10225376	S	S		R	M306V	R	M306V	True	5
+Ethambutol	ERR10225389	S	S		R	embA-16C>T	R	M306V	True	5
+Ethambutol	ERR10225416	S	S		R	embA-12C>T	S		True	5
+Ethambutol	ERR10225424	S	R	Q497R	R	Q497R	R	mdl 0.51	True	5
+Ethambutol	ERR10225459	S	S		R	G406S	R	G406S	True	5
+Ethambutol	ERR10225375	S	S		S		S		False	6
+Ethambutol	ERR10225382	S	S		S		S		False	6
+Ethambutol	ERR10225385	S	S		S		S		False	6
+Ethambutol	ERR10225399	S	S		S		S		False	6
+Ethambutol	ERR10225415	S	S		S		S		False	6
+Ethambutol	ERR10225445	S	S		S		S		False	6
+Ethambutol	ERR10225469	S	S		S		S		False	6
+Ethambutol	ERR10225497	S	S		S		S		False	6
+Ethambutol	ERR10225499	S	S		S		S		False	6
+Ethambutol	ERR10225500	S	S		S		S		False	6
+Ethambutol	ERR10225504	S	S		S		S		False	6
+Ethambutol	ERR10225511	S	S		S		S		False	6
+Ethambutol	ERR10225514	S	S		S		S		False	6
+Ethambutol	ERR10225517	S	S		S		S		False	6
+Ethambutol	ERR10225519	S	S		S		S		False	6
+Ethambutol	ERR10225520	S	S		S		S		False	6
+Ethambutol	ERR10225523	S	S		S		S		False	6
+Ethambutol	ERR10225524	S	S		S		S		False	6
+Ethambutol	ERR10225525	S	S		S		S		False	6
+Ethambutol	ERR10225527	S	S		S		S		False	6
+Ethambutol	ERR10225528	S	S		S		S		False	6
+Ethambutol	ERR10225536	S	S		S		S		False	6
+Ethambutol	ERR10225537	S	S		S		S		False	6
+Ethambutol	ERR10225539	S	S		S		S		False	6
+Ethambutol	ERR10225543	S	S		S		S		False	6
+Ethambutol	ERR10225546	S	S		S		S		False	6
+Ethambutol	ERR10225551	S	S		S		S		False	6
+Ethambutol	ERR10225553	S	S		S		S		False	6

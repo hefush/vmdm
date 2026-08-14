@@ -1,0 +1,6 @@
+Name	Drug	Evidence
+SAMEA1102585	Ethambutol	embB_p.Met306Val(R:34.23%),model(0.66)
+SAMEA1102585	Isoniazid	model(0.98)
+SAMEA1102585	Kanamycin	eis_c.-10G>A(R:6.60%)
+SAMEA1102585	Rifampicin	rpoB_p.Ser450Leu(R:64.40%),model(0.99)
+SAMEA1102585	Streptomycin	rrs_n.878G>A(I:0.48%)

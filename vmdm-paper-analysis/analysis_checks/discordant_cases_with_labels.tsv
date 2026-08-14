@@ -1,0 +1,15 @@
+Drug	Name	canonical_case	normalized_labels	Mykrobe_evidence_short	TBProfiler_evidence_short	VMDM_evidence_short
+Rifampicin	ERR10225376	1	rpoB_p.Ser450Leu	S450L	S450L	S450L
+Rifampicin	ERR10225399	1	rpoB_p.Ser450Leu		S450L	S450L
+Rifampicin	ERR10225414	1	rpoB_p.Ser450Leu	S450L		S450L
+Rifampicin	ERR10225416	1	rpoB_p.Ser450Leu	S450L	S450L	S450L
+Rifampicin	ERR10225550	1	rpoB_p.Ser450Leu	S450L	S450L	S450L
+Isoniazid	ERR10225376	1	katG_p.Ser315Thr		S315T	S315T
+Isoniazid	ERR10225382	1	katG_p.Ser315Thr	S315T	S315T	S315T
+Isoniazid	ERR10225385	1	katG_p.Ser315Thr		S315T	mdl 0.99
+Isoniazid	ERR10225467	1	katG_p.Ser315Thr		S315T	mdl 0.99
+Ethambutol	ERR10225376	1	embB_p.Met306Val		M306V	M306V
+Ethambutol	ERR10225389	1	embA-16C>T,embB_p.Met306Val		embA-16C>T	M306V
+Ethambutol	ERR10225416	0	embA-12C>T		embA-12C>T	
+Ethambutol	ERR10225424	1	embB_p.Gln497Arg	Q497R	Q497R	mdl 0.51
+Ethambutol	ERR10225459	1	embB_p.Gly406Ser		G406S	G406S

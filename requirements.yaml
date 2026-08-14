@@ -1,6 +1,6 @@
 channels:
-  - bioconda
-  - conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
   - defaults
 dependencies:
   - bwa=0.7.17

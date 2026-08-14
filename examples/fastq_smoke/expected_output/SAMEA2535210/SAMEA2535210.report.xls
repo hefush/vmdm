@@ -1,0 +1,5 @@
+Name	Drug	Evidence
+SAMEA2535210	Ethambutol	embB_p.Met306Ile(R:20.60%),model(0.86)
+SAMEA2535210	Isoniazid	katG_p.Ser315Thr(R:77.81%),model(1.00)
+SAMEA2535210	Pyrazinamide	pncA_p.Arg154Gly(R:0.39%)
+SAMEA2535210	Rifampicin	model(0.95)

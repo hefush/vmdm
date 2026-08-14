@@ -5,7 +5,6 @@ import resource
 import xgboost as xgb
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import recall_score, precision_score, accuracy_score, precision_recall_curve, auc
 from scipy.sparse import csr_matrix
@@ -25,6 +24,16 @@ threshold = 0.5
 # Whether to plot AUC curve for test set, default is False:
 plot_auc = False
 
+
+def get_model_threads():
+    try:
+        return max(1, int(os.environ.get('VMDM_MODEL_THREADS', os.environ.get('OMP_NUM_THREADS', '2'))))
+    except ValueError:
+        return 2
+
+
+model_threads = get_model_threads()
+
 # For recording resource consumption:
 start_cpu = resource.getrusage(resource.RUSAGE_SELF).ru_utime
 start_time = time.time()
@@ -34,14 +43,25 @@ df = pd.read_table(trainfile, delimiter='\t')
 y = df['Drug']
 X = df.drop(['Name', 'Drug'], axis=1)
 
+if X.shape[1] == 0:
+    raise SystemExit(
+        "No overlapping features were found between the query sample and the "
+        "training database. Check the VCF, feature list, --min_cov and --max_snps settings."
+    )
+
+feature_names = X.columns
+
 # Convert to sparse matrix to save memory:
 X = csr_matrix(X)
 
 # Split training set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+stratify = y if y.nunique() > 1 and y.value_counts().min() >= 2 else None
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=stratify
+)
 
 # Define XGBoost model
-model = xgb.XGBClassifier(tree_method='hist')
+model = xgb.XGBClassifier(tree_method='hist', random_state=42, eval_metric='logloss', n_jobs=model_threads)
 #model = xgb.XGBClassifier(n_estimators=500, max_depth=200)
 
 # Fit model
@@ -55,26 +75,26 @@ y_pred = (y_pred_prob >= threshold).astype(int)
 precision, recall, thresholds = precision_recall_curve(y_test, y_pred_prob)
 
 # Calculate precision (PPV):
-raw_precision = precision_score(y_test, y_pred)
+raw_precision = precision_score(y_test, y_pred, zero_division=0)
 # Adjust threshold based on PPV on test set:
 if raw_precision < min_ppv:
-    optimal_idx = np.argmax(precision >= min_ppv)
-    if optimal_idx < len(thresholds):
-        if thresholds[optimal_idx] > threshold:
-            threshold = thresholds[optimal_idx]
-    else:
-        if thresholds[-1] > threshold:
-            threshold = thresholds[-1]
+    eligible = np.where(precision[:-1] >= min_ppv)[0]
+    if len(eligible) > 0:
+        threshold = max(threshold, thresholds[eligible[0]])
+    elif len(thresholds) > 0:
+        threshold = max(threshold, thresholds[-1])
     # Make predictions based on new threshold:
     y_pred = (y_pred_prob >= threshold).astype(int)
 
 # Calculate performance scores
 model_auc = auc(recall, precision)
-model_recall = recall_score(y_test, y_pred)
-model_precision = precision_score(y_test, y_pred)
+model_recall = recall_score(y_test, y_pred, zero_division=0)
+model_precision = precision_score(y_test, y_pred, zero_division=0)
 model_accuracy = accuracy_score(y_test, y_pred)
 
 if plot_auc:
+    import matplotlib.pyplot as plt
+
     # Plot Precision-Recall curve
     plt.figure(figsize=(8, 6))
     plt.plot(recall, precision, lw=2, label='Precision-Recall curve (area = %0.2f)' % model_auc)
@@ -93,6 +113,14 @@ mem_peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 # Read test set:
 df = pd.read_table(validfile, delimiter='\t')
 X_valid = df.drop(['Name'], axis=1)
+
+missing_features = [feature for feature in feature_names if feature not in X_valid.columns]
+if missing_features:
+    raise SystemExit(
+        "The query feature file does not contain all training features: "
+        + ", ".join(missing_features[:10])
+    )
+X_valid = X_valid.loc[:, feature_names]
 
 # Convert to sparse matrix to save memory:
 X_valid = csr_matrix(X_valid)

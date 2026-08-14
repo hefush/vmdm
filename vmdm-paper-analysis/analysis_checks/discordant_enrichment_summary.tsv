@@ -1,0 +1,5 @@
+Drug	current_cases	current_canonical_cases	current_canonical_fraction	training_resistant_evidence_rows	training_resistant_canonical_rows	training_resistant_canonical_fraction	training_susceptible_evidence_rows	training_susceptible_canonical_rows	training_susceptible_canonical_fraction	distinct_resistant_mutation_labels	predefined_canonical_labels	p_uniform_distinct_resistant_labels	p_binomial_vs_susceptible_evidence	p_fisher_vs_susceptible_evidence
+Rifampicin	5	5	1.0	4592	3059	0.6661585365853658	176	5	0.028409090909090908	87	1	2.006336328329807e-10	1.850489744720325e-08	1.6458278507917627e-07
+Isoniazid	4	4	1.0	5193	4784	0.9212401309455036	145	58	0.4	135	2	4.817091643286838e-08	0.025600000000000005	0.028288284569559605
+Ethambutol	5	4	0.8	2451	1194	0.48714810281517745	1035	284	0.2743961352657005	35	3	0.0002513809722139585	0.022123073611422288	0.022610578412060427
+Combined	14	13	0.9285714285714286									3.3551267972484384e-20	1.4091397680536533e-10	

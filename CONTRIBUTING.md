@@ -21,6 +21,8 @@ Please report bugs via [GitHub Issues](https://github.com/hefush/vmdm/issues). I
 ```bash
 git clone https://github.com/hefush/vmdm.git
 cd vmdm
-conda env create -f requirements.yaml -p venv
+mamba env create -f requirements.yaml -p ./venv
 conda activate ./venv
 ```
+
+If Mamba is not available, use `conda env create -f requirements.yaml -p ./venv`.

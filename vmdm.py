@@ -196,7 +196,7 @@ def generate_sample_shell(name, files, out_dir, configs):
             f"{q(configs['bcftools'])} call -c -Oz -o {q(raw_vcf)}"
         )
 
-    shell_content = []
+    shell_content = ['set -e']
     cleanup_files = []
 
     if len(files) == 1:
@@ -271,10 +271,18 @@ def generate_sample_shell(name, files, out_dir, configs):
     predict_method = os.path.join(SCRIPT_DIR, 'single_lightgbm_model_sparse.py')
     if 'xgboost' in configs['method'].lower():
         predict_method = os.path.join(SCRIPT_DIR, 'single_xgboost_model_sparse.py')
+    model_threads = max(1, int(configs['threads']))
+    model_env = (
+        f"VMDM_MODEL_THREADS={model_threads} "
+        f"OMP_NUM_THREADS={model_threads} "
+        f"OPENBLAS_NUM_THREADS={model_threads} "
+        f"MKL_NUM_THREADS={model_threads} "
+        f"NUMEXPR_NUM_THREADS={model_threads}"
+    )
     for drug in drugs:
         min_ppv = min_ppv_by_drug[drug]
         predict_cmd = (
-            f"{q(configs['python'])} {q(predict_method)} "
+            f"{model_env} {q(configs['python'])} {q(predict_method)} "
             f"{q(os.path.join(sample_dir, drug, f'{name}.train.xls'))} "
             f"{q(os.path.join(sample_dir, drug, f'{name}.test.xls'))} "
             f"{q(os.path.join(sample_dir, drug, f'{name}.predict.xls'))} {min_ppv}"
@@ -376,7 +384,7 @@ Examples:
     analysis_group.add_argument('--jobs', default=5, type=int,
                                 help='Number of samples to run in parallel')
     analysis_group.add_argument('--threads', default=20, type=int,
-                                help='Threads per sample for bwa/samtools steps')
+                                help='Threads per sample for bwa/samtools and model steps')
 
     args = parser.parse_args()
     configs = build_config(args)
