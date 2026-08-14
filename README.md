@@ -84,7 +84,7 @@ Requirements:
 The supplied `requirements.yaml` pins the versions used for this release and
 selects OpenBLAS-backed BLAS/LAPACK for portable CPU parallelism. The file uses
 mirror channel URLs for faster environment solving in regions where those
-mirrors are reliable, followed by standard `bioconda` and `conda-forge`
+mirrors are reliable, followed by standard `conda-forge` and `bioconda`
 channels as public fallbacks.
 
 The default database is included under `MTBdb/`. No Git LFS step is required for the current release.
