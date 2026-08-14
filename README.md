@@ -82,10 +82,10 @@ Requirements:
   scientific Python stack installed through `requirements.yaml`
 
 The supplied `requirements.yaml` pins the versions used for this release and
-selects OpenBLAS-backed BLAS/LAPACK for portable CPU parallelism. The file uses
-mirror channel URLs for faster environment solving; if those channels are
-unavailable, replace them with standard `bioconda` and `conda-forge` channels
-while keeping the pinned package versions.
+selects OpenBLAS-backed BLAS/LAPACK for portable CPU parallelism. The file lists
+mirror channel URLs first for faster environment solving in regions where those
+mirrors are reliable, followed by standard `bioconda` and `conda-forge`
+channels as public fallbacks.
 
 The default database is included under `MTBdb/`. No Git LFS step is required for the current release.
 
