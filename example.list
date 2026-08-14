@@ -1,3 +1,2 @@
-sample1	/path/to/sample1_R1.fastq.gz
-sample1	/path/to/sample1_R2.fastq.gz
-sample2	/path/to/sample2.fastq.gz
+SAMEA1102585	examples/fastq_smoke/SAMEA1102585.subseq.fq.gz
+SAMEA2535210	examples/fastq_smoke/SAMEA2535210.subseq.fq.gz

@@ -13,7 +13,7 @@ Files:
 From the repository root, after creating and activating the conda environment:
 
 ```bash
-python vmdm.py examples/fastq_smoke/example_fastq.list examples/fastq_smoke/output --jobs 1 --threads 2
+python vmdm.py example.list examples/fastq_smoke/output --jobs 1 --threads 2
 ```
 
 This command uses the default four first-line drugs: Rifampicin, Isoniazid,

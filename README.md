@@ -52,7 +52,7 @@ gzip -dk MTBdb/*.data.xls.gz
 Run the bundled two-sample FASTQ smoke test:
 
 ```bash
-python vmdm.py examples/fastq_smoke/example_fastq.list examples/fastq_smoke/output --jobs 1 --threads 2
+python vmdm.py example.list examples/fastq_smoke/output --jobs 1 --threads 2
 ```
 
 The command should exit with code 0 and write reports under
