@@ -41,6 +41,19 @@ conda env create -f requirements.yaml -p ./venv
 conda activate ./venv
 ```
 
+The default `requirements.yaml` uses mirror channels first for faster solves
+and downloads in regions where those mirrors are reliable. If environment
+creation fails with mirror-related DNS, HTTP 403 or temporary synchronization
+errors, create the same pinned environment from public channels instead:
+
+```bash
+mamba env create -f requirements.public.yaml -p ./venv
+conda activate ./venv
+```
+
+If Mamba is unavailable, use `conda env create` with
+`requirements.public.yaml` in the same way.
+
 For smoke tests, demonstrations and larger analyses, we recommend one-time
 decompression of the packaged training tables. This adds about 1.5 GB of disk
 usage but avoids repeated gzip reads during model fitting.
@@ -79,13 +92,15 @@ Requirements:
 - Conda or Mamba package manager
 - Python 3.11 from the supplied Conda environment
 - BWA, samtools, bcftools, bedtools, SnpEff, LightGBM, XGBoost and the
-  scientific Python stack installed through `requirements.yaml`
+  scientific Python stack installed through `requirements.yaml` or
+  `requirements.public.yaml`
 
 The supplied `requirements.yaml` pins the versions used for this release and
 selects OpenBLAS-backed BLAS/LAPACK for portable CPU parallelism. The file uses
 mirror channel URLs for faster environment solving in regions where those
-mirrors are reliable, followed by standard `conda-forge` and `bioconda`
-channels as public fallbacks.
+mirrors are reliable. `requirements.public.yaml` contains the same dependency
+pins but uses upstream `conda-forge` and `bioconda` channels, which is useful
+when a mirror is temporarily unreachable or returns download errors.
 
 The default database is included under `MTBdb/`. No Git LFS step is required for the current release.
 
